@@ -19,17 +19,29 @@
   display: flex;
   flex: 1;
 }
-.messageSender__top > form > input {
+.messageSender__top > form > input:nth-child(1) {
   outline-width: 0;
   border: none;
-  padding: 0px 20px;
-  margin: 0px 10px;
+  padding: 8px 20px;
+  margin: 1px 10px;
   border-radius: 999px;
   background-color: #eff2f5;
-  flex: 1;
+  flex: 60%;
+}
+.messageSender__top > form > input:nth-child(2) {
+  outline-width: 0;
+  border: none;
+  padding: 8px 20px;
+  margin: 1px 10px;
+  border-radius: 999px;
+  background-color: #eff2f5;
+  flex: 40%;
 }
 .messageSender__top > form > button {
   display: none;
+}
+.messageSender__top > form .file_selector {
+  width: 20%;
 }
 .messageSender__bottom {
   display: flex;

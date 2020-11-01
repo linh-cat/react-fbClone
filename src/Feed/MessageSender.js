@@ -12,6 +12,11 @@ function MessageSender() {
     e.preventDefault();
     setInput("");
   };
+  const handleChange = (e) => {
+    if (e.target.files[0]) {
+      setUrlImage(e.target.files[0]);
+    }
+  };
   return (
     <div className="messageSender">
       <div className="messageSender__top">
@@ -23,9 +28,10 @@ function MessageSender() {
             onChange={(e) => setInput(e.target.value)}
           />
           <input
-            placeholder="Image URL(Optional)"
+            type="file"
             value={urlImage}
-            onChange={(e) => setUrlImage(e.target.value)}
+            className="file_selector"
+            onChange={handleChange}
           />
 
           <button type="submit" onClick={handleSubmit}>
